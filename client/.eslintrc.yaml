@@ -1,0 +1,18 @@
+env:
+  browser: true
+  es2021: true
+  jest: true
+  node: true
+extends:
+  - airbnb
+overrides: []
+parserOptions:
+  ecmaVersion: latest
+  sourceType: module
+rules: 
+  semi: [2, always]
+  indent: ["error", 2]
+  react/jsx-filename-extension: 
+    - 1
+    - extensions: [".js", ".jsx"]
+  react/jsx-props-no-spreading: [0]

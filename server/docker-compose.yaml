@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  db:
+    image: timescale/timescaledb:latest-pg14
+    container_name: todo_db
+    platform: linux/x86_64
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - /var/lib/postgresql
+    environment:
+      POSTGRES_DB: todo
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
